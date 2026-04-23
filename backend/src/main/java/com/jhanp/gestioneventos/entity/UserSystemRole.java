@@ -9,8 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "usuario_rol_evento")
-public class UserRoleEvent {
+@Table(name = "usuario_rol_sistema")
+public class UserSystemRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,13 +21,6 @@ public class UserRoleEvent {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "evento_id")
-    private Event event;
-
-    @ManyToOne
-    @JoinColumn(name = "rol_evento_id")
-    private RoleEvent roleEvent;
-
-    @Column(name = "activo")
-    private Boolean active;
+    @JoinColumn(name = "rol_sistema_id")
+    private SystemRole systemRole;
 }

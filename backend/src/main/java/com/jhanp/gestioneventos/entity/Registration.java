@@ -3,7 +3,7 @@ package com.jhanp.gestioneventos.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Setter
 @Getter
@@ -27,7 +27,7 @@ public class Registration {
     private EventAccess eventAccess;
 
     @Column(name = "fecha_inscripcion")
-    private LocalDateTime registrationDate;
+    private Instant registrationDate;
 
     @Column(name = "estado_inscripcion")
     private String registrationStatus;

@@ -44,7 +44,7 @@ public class User {
     private Boolean active;
 
     @OneToMany(mappedBy = "user")
-    private List<UserRoleSystem> roles;
+    private List<UserSystemRole> userSystemRoles;
 
     @OneToMany(mappedBy = "user")
     private List<Registration> registrations;

@@ -3,7 +3,7 @@ package com.jhanp.gestioneventos.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 @Setter
 @Getter
@@ -30,7 +30,7 @@ public class InvitationUserEvent {
     private String invitationStatus;
 
     @Column(name = "fecha_envio")
-    private LocalDateTime sentDate;
+    private Instant sentDate;
 
     @Column(name = "activo")
     private Boolean active;

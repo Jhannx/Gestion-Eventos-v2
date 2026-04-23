@@ -1,7 +1,7 @@
 package com.jhanp.gestioneventos.repository;
 
-import com.jhanp.gestioneventos.entity.RoleEvent;
+import com.jhanp.gestioneventos.entity.EventRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RoleEventRepository extends JpaRepository<RoleEvent, Long> {
+public interface RoleEventRepository extends JpaRepository<EventRole, Long> {
 }

@@ -1,17 +1,18 @@
 package com.jhanp.gestioneventos.entity;
+
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
 
+@Entity
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-@Table(name = "rol_evento")
-public class RoleEvent {
+@Table(name = "rol_sistema")
+public class SystemRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,6 +27,6 @@ public class RoleEvent {
     @Column(name = "activo")
     private Boolean active;
 
-    @OneToMany(mappedBy = "roleEvent")
-    private List<UserRoleEvent> userRoles;
+    @OneToMany(mappedBy = "systemRole")
+    private List<UserSystemRole> userRoles;
 }
