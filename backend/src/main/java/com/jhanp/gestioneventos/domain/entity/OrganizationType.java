@@ -15,7 +15,7 @@ import java.util.List;
 public class OrganizationType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "nombre")
     private String name;
@@ -29,3 +29,4 @@ public class OrganizationType {
     @OneToMany(mappedBy = "organizationType")
     private List<Organization> organizations;
 }
+

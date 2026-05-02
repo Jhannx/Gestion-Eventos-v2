@@ -16,7 +16,7 @@ public class InvitationOrganizationEvent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "evento_id")
@@ -35,3 +35,4 @@ public class InvitationOrganizationEvent {
     @Column(name = "activo")
     private Boolean active;
 }
+

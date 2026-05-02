@@ -10,10 +10,11 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 public class InvitationOrganizationEventResponseDTO {
-    private Long id;
+    private Integer id;
     private EventResponseDTO event;
     private OrganizationResponseDTO organization;
     private String invitationStatus;
     private Instant sentDate;
     private Boolean active;
 }
+

@@ -13,7 +13,7 @@ public interface IEventService {
     Page<EventResponseDTO> getActiveEvents(int page, int size);
     Page<EventResponseDTO> getInactiveEvents(int page, int size);
     List<EventResponseDTO> searchEventById(String q);
-    EventResponseDTO getEventById(Long id);
+    EventResponseDTO getEventById(Integer id);
     EventResponseDTO createEvent(EventRequestDTO eventReq);
     EventResponseDTO updateEvent(EventRequestDTO eventReq);
     Boolean deleteEvent(Integer id);
@@ -25,3 +25,4 @@ public interface IEventService {
     Boolean deleteEventAccess(Integer idEvent, Integer idAccess);
 
 }
+

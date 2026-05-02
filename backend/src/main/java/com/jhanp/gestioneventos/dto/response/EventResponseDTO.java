@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class EventResponseDTO {
-    private Long id;
+    private Integer id;
     private String name;
     private String description;
     private String address;
@@ -29,3 +29,4 @@ public class EventResponseDTO {
     private OrganizationResponseDTO organization;
     private List<EventAccessResponseDTO> eventAccessList;
 }
+

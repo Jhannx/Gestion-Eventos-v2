@@ -17,7 +17,7 @@ public class EventAccess {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "evento_id")
@@ -42,3 +42,4 @@ public class EventAccess {
     @OneToMany(mappedBy = "eventAccess")
     private List<Registration> registrations;
 }
+

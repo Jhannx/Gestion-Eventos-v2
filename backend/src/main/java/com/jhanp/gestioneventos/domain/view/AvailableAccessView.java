@@ -19,10 +19,10 @@ import java.time.LocalDate;
 public class AvailableAccessView {
     @Id
     @Column(name = "acceso_id")
-    private Long idEventAccess;
+    private Integer idEventAccess;
 
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String eventName;
@@ -45,3 +45,4 @@ public class AvailableAccessView {
     @Column(name = "estado_acceso")
     private String accessStatus;
 }
+

@@ -13,6 +13,7 @@ public class EventAccessRequestDTO {
     private BigDecimal price;
     private Integer spots;
 
-    private Long idEvent;
-    private Long idAccessType;
+    private Integer idEvent;
+    private Integer idAccessType;
 }
+

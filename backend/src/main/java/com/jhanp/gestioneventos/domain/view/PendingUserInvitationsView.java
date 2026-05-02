@@ -18,10 +18,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PendingUserInvitationsView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String eventName;
@@ -30,7 +30,7 @@ public class PendingUserInvitationsView {
     private LocalDate date;
 
     @Column(name = "usuario_id")
-    private Long idUser;
+    private Integer idUser;
 
     @Column(name = "usuario_nombre")
     private String userName;
@@ -47,3 +47,4 @@ public class PendingUserInvitationsView {
     private Instant sentDate;
 
 }
+

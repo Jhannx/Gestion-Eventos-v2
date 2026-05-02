@@ -10,9 +10,10 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class InvitationUserEventoRequestDTO {
-    private Long idEvent;
-    private Long idUser;
+    private Integer idEvent;
+    private Integer idUser;
     private String invitationStatus;
     private Instant sentDate;
     private Boolean active;
 }
+

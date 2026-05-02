@@ -3,9 +3,13 @@ package com.jhanp.gestioneventos.service;
 import com.jhanp.gestioneventos.dto.request.OrganizationTypeRequestDTO;
 import com.jhanp.gestioneventos.dto.response.OrganizationTypeResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IOrganizationTypeService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class OrganizationTypeService implements IOrganizationTypeService {
     @Override
     public List<OrganizationTypeResponseDTO> getAllOrganizationTypes() {

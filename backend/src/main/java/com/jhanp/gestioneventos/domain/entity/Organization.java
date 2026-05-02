@@ -16,7 +16,7 @@ public class Organization {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "tipo_organizacion_id")
@@ -37,3 +37,4 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     private List<InvitationOrganizationEvent> invitations;
 }
+

@@ -10,7 +10,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 public class RegistrationResponseDTO {
-    private Long id;
+    private Integer id;
     private Instant RegistrationDate;
     private String registrationStatus;
     private String attendance;
@@ -20,3 +20,4 @@ public class RegistrationResponseDTO {
     private EventAccessResponseDTO eventAccess;
 
 }
+

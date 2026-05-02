@@ -14,7 +14,7 @@ public class UserSystemRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -24,3 +24,4 @@ public class UserSystemRole {
     @JoinColumn(name = "rol_sistema_id")
     private SystemRole systemRole;
 }
+

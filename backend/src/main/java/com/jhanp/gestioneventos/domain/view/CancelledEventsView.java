@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class CancelledEventsView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "nombre")
     private String name;
@@ -43,3 +43,4 @@ public class CancelledEventsView {
     @Column(name = "organizacion")
     private String organization;
 }
+

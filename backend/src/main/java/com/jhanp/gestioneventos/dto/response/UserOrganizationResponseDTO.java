@@ -8,10 +8,11 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserOrganizationResponseDTO {
-    private Long idUserOrganization;
+    private Integer idUserOrganization;
     private UserResponseDTO userResponseDTO;
     private OrganizationResponseDTO organizationResponseDTO;
     private String OrganizationRole;
     private Boolean active;
 
 }
+

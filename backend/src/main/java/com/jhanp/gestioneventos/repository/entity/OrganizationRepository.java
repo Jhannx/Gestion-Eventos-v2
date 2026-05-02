@@ -7,9 +7,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrganizationRepository extends JpaRepository<Organization, Long> {
+public interface OrganizationRepository extends JpaRepository<Organization, Integer> {
 
     // Procedimiento
     @Procedure(procedureName = "sp_desactivar_organizacion")
-    void inactivateOrganization(@Param("p_organizacion_id") Integer organizationId);
+    void deactivateOrganization(@Param("p_organizacion_id") Integer organizationId);
 }
+

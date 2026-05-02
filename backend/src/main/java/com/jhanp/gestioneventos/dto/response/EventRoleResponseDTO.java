@@ -8,8 +8,9 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class EventRoleResponseDTO {
-    private Long id;
+    private Integer id;
     private String name;
     private String description;
     private Boolean active;
 }
+

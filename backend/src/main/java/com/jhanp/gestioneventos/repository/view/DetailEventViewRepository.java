@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DetailEventViewRepository extends JpaRepository<DetailEventView, Long> {
+public interface DetailEventViewRepository extends JpaRepository<DetailEventView, Integer> {
 
-    List<DetailEventView> findByIdEvent(Long idEvent);
+    List<DetailEventView> findByIdEvent(Integer idEvent);
 
     List<DetailEventView> findByAccessType(String accessType);
 }
+

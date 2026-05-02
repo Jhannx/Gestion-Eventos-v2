@@ -14,9 +14,8 @@ import java.time.LocalTime;
 @Getter
 @NoArgsConstructor
 public class ActiveEventsView {
-
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "nombre")
     private String name;
@@ -55,3 +54,4 @@ public class ActiveEventsView {
     private String organization;
 
 }
+

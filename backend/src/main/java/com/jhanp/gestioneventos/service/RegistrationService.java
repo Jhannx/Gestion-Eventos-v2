@@ -4,10 +4,14 @@ import com.jhanp.gestioneventos.dto.request.RegistrationRequestDTO;
 import com.jhanp.gestioneventos.dto.response.EventAccessResponseDTO;
 import com.jhanp.gestioneventos.dto.response.RegistrationResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IRegistrationService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class RegistrationService implements IRegistrationService {
 
     @Override
@@ -16,7 +20,7 @@ public class RegistrationService implements IRegistrationService {
     }
 
     @Override
-    public List<RegistrationResponseDTO> filterByIdUser(Long id) {
+    public List<RegistrationResponseDTO> filterByIdUser(Integer id) {
         return List.of();
     }
 
@@ -26,7 +30,7 @@ public class RegistrationService implements IRegistrationService {
     }
 
     @Override
-    public List<RegistrationResponseDTO> filterByBoth(Long identificacion, String nombreEvento) {
+    public List<RegistrationResponseDTO> filterByBoth(Integer identificacion, String nombreEvento) {
         return List.of();
     }
 
@@ -65,3 +69,4 @@ public class RegistrationService implements IRegistrationService {
         return null;
     }
 }
+

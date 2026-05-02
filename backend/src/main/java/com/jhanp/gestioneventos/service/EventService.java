@@ -5,10 +5,14 @@ import com.jhanp.gestioneventos.dto.request.EventRequestDTO;
 import com.jhanp.gestioneventos.dto.response.EventAccessResponseDTO;
 import com.jhanp.gestioneventos.dto.response.EventResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IEventService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class EventService implements IEventService {
 
     @Override
@@ -32,7 +36,7 @@ public class EventService implements IEventService {
     }
 
     @Override
-    public EventResponseDTO getEventById(Long id) {
+    public EventResponseDTO getEventById(Integer id) {
         return null;
     }
 
@@ -76,3 +80,4 @@ public class EventService implements IEventService {
         return null;
     }
 }
+

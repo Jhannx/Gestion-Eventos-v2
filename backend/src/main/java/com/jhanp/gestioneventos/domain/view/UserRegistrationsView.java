@@ -19,10 +19,10 @@ import java.time.LocalDate;
 public class UserRegistrationsView {
     @Id
     @Column(name = "inscripcion_id")
-    private Long idRegistration;
+    private Integer idRegistration;
 
     @Column(name = "usuario_id")
-    private Long idUser;
+    private Integer idUser;
 
     @Column(name = "usuario_nombre")
     private String userName;
@@ -33,7 +33,7 @@ public class UserRegistrationsView {
     private String email;
 
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String eventName;
@@ -59,3 +59,4 @@ public class UserRegistrationsView {
     @Column(name = "asistencia")
     private String attendance;
 }
+

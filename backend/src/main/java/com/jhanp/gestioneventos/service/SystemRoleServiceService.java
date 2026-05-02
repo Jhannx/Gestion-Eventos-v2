@@ -3,9 +3,13 @@ package com.jhanp.gestioneventos.service;
 import com.jhanp.gestioneventos.dto.request.SystemRoleRequestDTO;
 import com.jhanp.gestioneventos.dto.response.SystemRoleResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.ISystemRoleService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class SystemRoleServiceService implements ISystemRoleService {
     @Override
     public List<SystemRoleResponseDTO> getAllSystemRoles() {

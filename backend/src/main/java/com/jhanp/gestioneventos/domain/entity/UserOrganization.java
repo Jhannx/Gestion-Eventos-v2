@@ -14,7 +14,7 @@ public class UserOrganization {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -30,3 +30,4 @@ public class UserOrganization {
     @Column(name = "activo")
     private Boolean active;
 }
+

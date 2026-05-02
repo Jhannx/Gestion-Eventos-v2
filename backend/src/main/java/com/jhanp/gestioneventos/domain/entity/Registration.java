@@ -16,7 +16,7 @@ public class Registration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -38,3 +38,4 @@ public class Registration {
     @Column(name = "activo")
     private Boolean active;
 }
+

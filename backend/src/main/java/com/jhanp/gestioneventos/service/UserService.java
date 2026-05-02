@@ -3,10 +3,14 @@ package com.jhanp.gestioneventos.service;
 import com.jhanp.gestioneventos.dto.request.UserRequestDTO;
 import com.jhanp.gestioneventos.dto.response.UserResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IUserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class UserService implements IUserService {
 
     @Override
@@ -30,7 +34,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserResponseDTO getUserById(Long id) {
+    public UserResponseDTO getUserById(Integer id) {
         return null;
     }
 
@@ -45,7 +49,8 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public Boolean deleteUser(Integer id) {
+    public Boolean deleteUser(Integer id, Boolean force) {
         return null;
     }
 }
+

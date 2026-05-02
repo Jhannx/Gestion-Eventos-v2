@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class OccupationEventView {
     @Id
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String name;
@@ -39,3 +39,4 @@ public class OccupationEventView {
     @Column(name = "porcentaje_ocupacion")
     private BigDecimal occupancyPercentage;
 }
+

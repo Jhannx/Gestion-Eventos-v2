@@ -3,9 +3,13 @@ package com.jhanp.gestioneventos.service;
 import com.jhanp.gestioneventos.dto.request.EventRoleRequestDTO;
 import com.jhanp.gestioneventos.dto.response.EventRoleResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IEventRoleService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class EventRoleService implements IEventRoleService {
     @Override
     public List<EventRoleResponseDTO> getAllEventoRoles() {

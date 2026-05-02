@@ -7,6 +7,7 @@ public class RegistrationRequestDTO {
     private String registrationStatus;
     private String attendance;
 
-    private Long idUser;
-    private Long idEventAccess;
+    private Integer idUser;
+    private Integer idEventAccess;
 }
+

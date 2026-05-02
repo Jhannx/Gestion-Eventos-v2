@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class UserResponseDTO {
-    private Long idUser;
+    private Integer idUser;
     private String typeIdentification;
     private String numberIdentification;
     private String name;
@@ -27,3 +27,4 @@ public class UserResponseDTO {
     private Boolean active;
 
 }
+

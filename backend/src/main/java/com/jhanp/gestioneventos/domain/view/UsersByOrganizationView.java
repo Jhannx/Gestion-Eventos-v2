@@ -15,16 +15,16 @@ import org.hibernate.annotations.Immutable;
 @NoArgsConstructor
 public class UsersByOrganizationView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "organizacion_id")
-    private Long idOrganizacion;
+    private Integer idOrganizacion;
 
     @Column(name = "organizacion")
     private String organizationName;
 
     @Column(name = "usuario_id")
-    private Long idUser;
+    private Integer idUser;
 
     @Column(name = "usuario_nombre")
     private String userName;
@@ -40,3 +40,4 @@ public class UsersByOrganizationView {
     @Column(name = "rol_en_org")
     private String organizationRole;
 }
+

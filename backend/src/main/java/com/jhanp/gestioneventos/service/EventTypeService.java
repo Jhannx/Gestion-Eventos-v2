@@ -3,10 +3,14 @@ package com.jhanp.gestioneventos.service;
 import com.jhanp.gestioneventos.dto.request.EventTypeRequestDTO;
 import com.jhanp.gestioneventos.dto.response.EventTypeResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IEventTypeService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class EventTypeService implements IEventTypeService {
     @Override
     public Page<EventTypeResponseDTO> getAllEventTypes(int page, int size) {

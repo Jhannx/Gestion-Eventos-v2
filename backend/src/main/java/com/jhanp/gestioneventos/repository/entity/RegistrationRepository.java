@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RegistrationRepository extends JpaRepository <Registration, Long> {
+public interface RegistrationRepository extends JpaRepository <Registration, Integer> {
 
     // Procedimientos
     @Procedure(procedureName = "sp_inscribir_usuario")
@@ -21,3 +21,4 @@ public interface RegistrationRepository extends JpaRepository <Registration, Lon
     @Query(value = "SELECT fn_total_inscritos(:eventId)", nativeQuery = true)
     Integer getTotalRegistrations(@Param("eventId") Integer idEvent);
 }
+

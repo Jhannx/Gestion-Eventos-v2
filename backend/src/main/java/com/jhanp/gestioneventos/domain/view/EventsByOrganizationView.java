@@ -17,16 +17,16 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class EventsByOrganizationView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "organizacion_id")
-    private Long idOrganizacion;
+    private Integer idOrganizacion;
 
     @Column(name = "organizacion")
     private String organizationName;
 
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String eventName;
@@ -40,3 +40,4 @@ public class EventsByOrganizationView {
     @Column(name = "tipo_acceso")
     private String accessType;
 }
+

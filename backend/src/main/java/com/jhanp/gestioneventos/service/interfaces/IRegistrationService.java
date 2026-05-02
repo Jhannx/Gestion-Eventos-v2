@@ -9,9 +9,9 @@ import java.util.List;
 
 public interface IRegistrationService {
     List<EventAccessResponseDTO> getAccessByEvent (Integer idEvent);
-    List<RegistrationResponseDTO> filterByIdUser(Long id);
+    List<RegistrationResponseDTO> filterByIdUser(Integer id);
     List<RegistrationResponseDTO> filterByEvent(String nameEvent);
-    List<RegistrationResponseDTO> filterByBoth(Long identificacion, String nombreEvento);
+    List<RegistrationResponseDTO> filterByBoth(Integer identificacion, String nombreEvento);
 
     Page<RegistrationResponseDTO> getAllRegistrations(int  page, int size);
     Page<RegistrationResponseDTO> getActiveRegistrations(int  page, int size);
@@ -21,3 +21,4 @@ public interface IRegistrationService {
     RegistrationResponseDTO upgradeRegistration(Integer id, RegistrationRequestDTO registrationReq);
     Boolean deleteRegistration(Integer id);
 }
+

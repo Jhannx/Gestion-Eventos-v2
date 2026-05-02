@@ -14,7 +14,7 @@ public class UserEventRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -31,3 +31,4 @@ public class UserEventRole {
     @Column(name = "activo")
     private Boolean active;
 }
+

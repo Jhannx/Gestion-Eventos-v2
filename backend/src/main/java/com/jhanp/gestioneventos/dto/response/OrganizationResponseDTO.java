@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class OrganizationResponseDTO {
-    private Long id;
+    private Integer id;
     private String name;
     private OrganizationTypeResponseDTO organizationType;
     private Boolean active;
@@ -21,3 +21,4 @@ public class OrganizationResponseDTO {
 
 
 }
+

@@ -1,14 +1,15 @@
 package com.jhanp.gestioneventos.repository.view;
 
+import com.jhanp.gestioneventos.domain.view.CancelledEventsView;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface CancelledEventsViewRepository extends JpaRepository<CancelledEventsViewRepository, Long> {
+public interface CancelledEventsViewRepository extends JpaRepository<CancelledEventsView, Integer> {
 
-    List<CancelledEventsViewRepository> findByOrganization(String organization);
+    Page<CancelledEventsView> findByOrganization(int page, int size, String organization);
 
-    List<CancelledEventsViewRepository> findByNameContainingIgnoreCase(String name);
+    Page<CancelledEventsView> findByNameContainingIgnoreCase(int page, int size, String name);
 }
+

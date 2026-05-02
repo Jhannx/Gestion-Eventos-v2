@@ -16,7 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "tipo_identificacion")
     private String identificationType;
@@ -55,3 +55,4 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<InvitationUserEvent> invitations;
 }
+

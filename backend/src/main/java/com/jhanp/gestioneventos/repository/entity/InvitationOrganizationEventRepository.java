@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InvitationOrganizationEventRepository extends JpaRepository <InvitationOrganizationEvent, Long> {
+public interface InvitationOrganizationEventRepository extends JpaRepository <InvitationOrganizationEvent, Integer> {
 }
+

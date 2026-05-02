@@ -18,7 +18,7 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "tipo_evento_id")
@@ -64,3 +64,4 @@ public class Event {
     @OneToMany(mappedBy = "event")
     private List<EventAccess> accesses;
 }
+

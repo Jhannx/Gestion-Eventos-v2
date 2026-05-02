@@ -11,8 +11,9 @@ public interface IUserService {
     Page<UserResponseDTO> getActiveUsers(int page, int size);
     Page<UserResponseDTO> getInactiveUsers(int page, int size);
     List<UserResponseDTO> searchById(String q);
-    UserResponseDTO getUserById(Long id);
+    UserResponseDTO getUserById(Integer id);
     UserResponseDTO createUser(UserRequestDTO userReq);
     UserResponseDTO updateUser(UserRequestDTO userReq);
-    Boolean deleteUser(Integer id);
+    Boolean deleteUser(Integer id, Boolean force);
 }
+

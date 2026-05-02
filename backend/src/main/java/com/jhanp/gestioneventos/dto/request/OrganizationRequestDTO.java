@@ -13,7 +13,8 @@ import java.util.List;
 public class OrganizationRequestDTO {
     private String name;
 
-    private Long idEventType;
+    private Integer idEventType;
     private List <UserOrganizationResponseDTO> members;
 
 }
+

@@ -17,10 +17,10 @@ import java.time.LocalTime;
 @NoArgsConstructor
 public class DetailEventView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "evento_id")
-    private Long idEvent;
+    private Integer idEvent;
 
     @Column(name = "evento")
     private String name;
@@ -67,3 +67,4 @@ public class DetailEventView {
     @Column(name = "estado_acceso")
     private String accessStatus;
 }
+

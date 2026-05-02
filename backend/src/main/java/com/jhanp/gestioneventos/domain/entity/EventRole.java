@@ -15,7 +15,7 @@ public class EventRole {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(name = "nombre")
     private String name;
@@ -29,3 +29,4 @@ public class EventRole {
     @OneToMany(mappedBy = "roleEvent")
     private List<UserEventRole> userRoles;
 }
+

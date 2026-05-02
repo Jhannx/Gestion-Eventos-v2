@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AvailableAccessViewRepository extends JpaRepository<AvailableAccessView, Long> {
+public interface AvailableAccessViewRepository extends JpaRepository<AvailableAccessView, Integer> {
 
-    List<AvailableAccessView> findByIdEvent(Long idEvent);
+    List<AvailableAccessView> findByIdEvent(Integer idEvent);
 
     List<AvailableAccessView> findByAccessType(String accessType);
 }
+

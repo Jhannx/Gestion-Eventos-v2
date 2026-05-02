@@ -1,15 +1,17 @@
 package com.jhanp.gestioneventos.repository.view;
 
 import com.jhanp.gestioneventos.domain.view.UsersByOrganizationView;
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface UsersByOrganizationViewRepository extends JpaRepository<UsersByOrganizationView, Long> {
+public interface UsersByOrganizationViewRepository extends JpaRepository<UsersByOrganizationView, Integer> {
 
-    List<UsersByOrganizationView> findByIdOrganization(Long idOrganization);
+    Page<UsersByOrganizationView> findByIdOrganization(int page, int size, Integer idOrganization);
 
-    List<UsersByOrganizationView> findByIdUser(Long idUser);
+    Page<UsersByOrganizationView> findByIdUser(int page, int size, Integer idUser);
 }
+

@@ -23,6 +23,7 @@ public class EventRequestDTO {
     private String eventStatus;
     private Boolean active;
 
-    private Long idEventType;
-    private Long idOrganization;
+    private Integer idEventType;
+    private Integer idOrganization;
 }
+

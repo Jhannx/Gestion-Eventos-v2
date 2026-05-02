@@ -13,7 +13,7 @@ import org.hibernate.annotations.Immutable;
 @NoArgsConstructor
 public class ActiveUsersView {
     @Id
-    private Long id;
+    private Integer id;
 
     @Column(name = "tipo_identificacion")
     private String identificationType;
@@ -39,3 +39,4 @@ public class ActiveUsersView {
     private String systemRole;
 
 }
+

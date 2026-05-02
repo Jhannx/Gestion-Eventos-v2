@@ -11,7 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class EventAccessResponseDTO {
-    private Long id;
+    private Integer id;
     private BigDecimal price;
     private Integer spots;
     private String accessStatus;
@@ -21,3 +21,4 @@ public class EventAccessResponseDTO {
     private AccessTypeResponseDTO access;
     private List<RegistrationResponseDTO> registrations;
 }
+
