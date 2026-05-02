@@ -13,7 +13,7 @@ import lombok.*;
 public class EventAccessResponseDTO {
     private Long id;
     private BigDecimal price;
-    private Integer slots;
+    private Integer spots;
     private String accessStatus;
     private Boolean active;
 

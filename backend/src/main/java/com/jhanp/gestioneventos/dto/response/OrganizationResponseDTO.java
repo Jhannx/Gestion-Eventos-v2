@@ -12,7 +12,7 @@ import java.util.List;
 public class OrganizationResponseDTO {
     private Long id;
     private String name;
-    private String description;
+    private OrganizationTypeResponseDTO organizationType;
     private Boolean active;
 
     private List<EventResponseDTO> events;

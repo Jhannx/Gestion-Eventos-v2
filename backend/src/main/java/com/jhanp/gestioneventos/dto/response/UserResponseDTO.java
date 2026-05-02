@@ -2,6 +2,8 @@ package com.jhanp.gestioneventos.dto.response;
 
 import lombok.*;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -17,8 +19,11 @@ public class UserResponseDTO {
     private String phone;
     private String email;
 
-    private OrganizationResponseDTO organization;
-    private SystemRoleResponseDTO roleSystem;
+    private List<UserOrganizationResponseDTO> organizations;
+    private List<InvitationUserEventResponseDTO> invitations;
+    private List<UserSystemRoleResponseDTO> userSystemRoles;
+    private List<RegistrationResponseDTO> registrations;
+
     private Boolean active;
 
 }

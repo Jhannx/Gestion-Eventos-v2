@@ -7,9 +7,10 @@ import com.jhanp.gestioneventos.service.interfaces.IAccessTypeService;
 import java.util.List;
 
 public class AccessTypeService implements IAccessTypeService {
+
     @Override
     public List<AccessTypeResponseDTO> getAllAccessTypes() {
-        return List.of();
+        return null;
     }
 
     @Override

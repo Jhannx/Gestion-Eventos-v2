@@ -12,7 +12,6 @@ import java.util.List;
 @Builder
 public class OrganizationRequestDTO {
     private String name;
-    private String description;
 
     private Long idEventType;
     private List <UserOrganizationResponseDTO> members;

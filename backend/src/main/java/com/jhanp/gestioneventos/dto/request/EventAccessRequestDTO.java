@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 public class EventAccessRequestDTO {
     private BigDecimal price;
-    private Integer slots;
+    private Integer spots;
 
     private Long idEvent;
     private Long idAccessType;
