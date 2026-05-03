@@ -1,6 +1,6 @@
 package com.jhanp.gestioneventos.service;
 
-import com.jhanp.gestioneventos.dto.request.InvitationUserEventoRequestDTO;
+import com.jhanp.gestioneventos.dto.request.InvitationUserEventRequestDTO;
 import com.jhanp.gestioneventos.dto.response.InvitationUserEventResponseDTO;
 import com.jhanp.gestioneventos.service.interfaces.IInvitationUserEventService;
 import lombok.RequiredArgsConstructor;
@@ -26,12 +26,12 @@ public class InvitationUserEventService implements IInvitationUserEventService {
     }
 
     @Override
-    public InvitationUserEventResponseDTO createUserInvitation(InvitationUserEventoRequestDTO invitationUserReq) {
+    public InvitationUserEventResponseDTO createUserInvitation(InvitationUserEventRequestDTO invitationUserReq) {
         return null;
     }
 
     @Override
-    public InvitationUserEventResponseDTO updateUserInvitation(InvitationUserEventoRequestDTO invitationUserReq) {
+    public InvitationUserEventResponseDTO updateUserInvitation(InvitationUserEventRequestDTO invitationUserReq) {
         return null;
     }
 

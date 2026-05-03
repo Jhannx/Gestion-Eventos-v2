@@ -10,7 +10,7 @@ public interface IAccessTypeService {
     List<AccessTypeResponseDTO> getActiveAccessTypes();
     List<AccessTypeResponseDTO> getInactiveAccessTypes();
     AccessTypeResponseDTO createAccessType(AccessTypeRequestDTO accessTypeReq);
-    AccessTypeResponseDTO updateAccessType(AccessTypeRequestDTO accessTypeReq);
+    AccessTypeResponseDTO updateAccessType(Integer id, AccessTypeRequestDTO accessTypeReq);
     Boolean deleteAccessType(Integer id);
 
 }

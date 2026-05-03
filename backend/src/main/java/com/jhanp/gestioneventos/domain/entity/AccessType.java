@@ -14,6 +14,13 @@ import java.util.List;
 @Table(name = "tipo_acceso")
 public class AccessType {
 
+    public AccessType(Integer id, String name, String description, Boolean active) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.active = active;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

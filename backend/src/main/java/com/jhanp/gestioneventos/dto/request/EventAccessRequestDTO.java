@@ -10,8 +10,11 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class EventAccessRequestDTO {
+    private Integer id;
     private BigDecimal price;
     private Integer spots;
+    private String accessStatus;
+    private Boolean active;
 
     private Integer idEvent;
     private Integer idAccessType;

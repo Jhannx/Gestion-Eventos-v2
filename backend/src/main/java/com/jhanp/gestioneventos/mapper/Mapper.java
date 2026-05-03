@@ -1,6 +1,7 @@
 package com.jhanp.gestioneventos.mapper;
 
 import com.jhanp.gestioneventos.domain.entity.*;
+import com.jhanp.gestioneventos.dto.request.*;
 import com.jhanp.gestioneventos.dto.response.*;
 
 import java.util.ArrayList;
@@ -271,9 +272,5 @@ public class Mapper {
                 .active(systemRole.getActive())
                 .build();
     }
-
-    /* TO OBJECT */
-
-
 
 }

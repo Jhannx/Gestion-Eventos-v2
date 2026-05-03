@@ -34,7 +34,7 @@ public class AvailableAccessView {
     private String eventStatus;
 
     @Column(name = "tipo_acceso")
-    private String eventType;
+    private String accessType;
 
     @Column(name = "precio")
     private BigDecimal price;

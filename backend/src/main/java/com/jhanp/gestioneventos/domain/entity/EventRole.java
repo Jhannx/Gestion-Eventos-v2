@@ -26,7 +26,7 @@ public class EventRole {
     @Column(name = "activo")
     private Boolean active;
 
-    @OneToMany(mappedBy = "roleEvent")
+    @OneToMany(mappedBy = "eventRole")
     private List<UserEventRole> userRoles;
 }
 

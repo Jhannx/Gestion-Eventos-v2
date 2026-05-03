@@ -20,7 +20,7 @@ public class EventsByOrganizationView {
     private Integer id;
 
     @Column(name = "organizacion_id")
-    private Integer idOrganizacion;
+    private Integer idOrganization;
 
     @Column(name = "organizacion")
     private String organizationName;

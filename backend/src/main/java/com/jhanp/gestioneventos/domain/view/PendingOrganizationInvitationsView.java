@@ -30,7 +30,7 @@ public class PendingOrganizationInvitationsView {
     private LocalDate date;
 
     @Column(name = "organizacion_id")
-    private Integer idOrganizacion;
+    private Integer idOrganization;
 
     @Column(name = "organizacion")
     private String organizationName;
