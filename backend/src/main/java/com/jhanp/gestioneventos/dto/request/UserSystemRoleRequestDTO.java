@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserSystemRoleRequestDTO {
+    private Integer id;
     private Integer idUser;
     private Integer idSystemRole;
 }

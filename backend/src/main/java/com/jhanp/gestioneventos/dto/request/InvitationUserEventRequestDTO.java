@@ -10,6 +10,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class InvitationUserEventRequestDTO {
+    private Integer id;
     private Integer idEvent;
     private Integer idUser;
     private String invitationStatus;

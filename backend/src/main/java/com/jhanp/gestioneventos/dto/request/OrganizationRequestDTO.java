@@ -11,10 +11,11 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class OrganizationRequestDTO {
+    private Long id;
     private String name;
+    private Boolean active;
 
-    private Integer idEventType;
+    private Integer idOrganizationType;
     private List <UserOrganizationResponseDTO> members;
-
 }
 

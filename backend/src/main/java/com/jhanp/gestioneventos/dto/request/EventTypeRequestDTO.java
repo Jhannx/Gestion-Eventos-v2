@@ -8,6 +8,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class EventTypeRequestDTO {
+    private Integer id;
     private String name;
     private String description;
+    private Boolean active;
 }

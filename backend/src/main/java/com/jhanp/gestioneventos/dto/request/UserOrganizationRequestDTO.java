@@ -1,4 +1,4 @@
-package com.jhanp.gestioneventos.dto.request;
+﻿package com.jhanp.gestioneventos.dto.request;
 
 import lombok.*;
 
@@ -8,8 +8,10 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserOrganizationRequestDTO {
+    private Integer id;
     private Integer idUser;
     private Integer idOrganization;
     private String OrganizationRole;
+    private Boolean active;
 }
 

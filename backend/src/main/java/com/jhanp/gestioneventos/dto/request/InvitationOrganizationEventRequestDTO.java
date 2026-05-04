@@ -1,4 +1,4 @@
-package com.jhanp.gestioneventos.dto.request;
+﻿package com.jhanp.gestioneventos.dto.request;
 
 import lombok.*;
 
@@ -10,6 +10,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 public class InvitationOrganizationEventRequestDTO {
+    private Integer id;
     private Integer idEvent;
     private Integer idOrganization;
     private String invitationStatus;

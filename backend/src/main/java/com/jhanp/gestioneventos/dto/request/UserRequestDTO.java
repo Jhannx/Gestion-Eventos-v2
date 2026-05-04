@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserRequestDTO {
+    private Integer id;
     private String typeIdentification;
     private String numberIdentification;
     private String name;
@@ -16,5 +17,5 @@ public class UserRequestDTO {
     private String phone;
     private String email;
     private String password;
-
+    private Boolean active;
 }

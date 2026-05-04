@@ -11,6 +11,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @Builder
 public class EventRequestDTO {
+    private Integer id;
     private String name;
     private String description;
     private String address;

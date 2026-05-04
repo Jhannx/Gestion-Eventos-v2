@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class UserEventRoleRequestDTO {
+    private Integer id;
     private Integer idUser;
     private Integer idEvent;
     private Integer idEventRole;
