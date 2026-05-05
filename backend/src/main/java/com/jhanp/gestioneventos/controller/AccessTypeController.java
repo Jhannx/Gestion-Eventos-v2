@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("/api/access-type")
 @RequiredArgsConstructor
 public class AccessTypeController {
-
     private final IAccessTypeService accessTypeService;
 
     @GetMapping
@@ -36,8 +35,7 @@ public class AccessTypeController {
     }
 
     @PostMapping
-    public ResponseEntity<AccessTypeResponseDTO> createAccessType(
-            @RequestBody AccessTypeRequestDTO accessTypeRequestDTO) {
+    public ResponseEntity<AccessTypeResponseDTO> createAccessType(@RequestBody AccessTypeRequestDTO accessTypeRequestDTO) {
         AccessTypeResponseDTO created = accessTypeService.createAccessType(accessTypeRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }

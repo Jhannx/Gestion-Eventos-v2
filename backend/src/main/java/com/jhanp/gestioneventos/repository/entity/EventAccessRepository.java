@@ -14,7 +14,7 @@ public interface EventAccessRepository extends JpaRepository <EventAccess, Integ
 
     // Procedimientos
     @Procedure(procedureName = "sp_crear_acceso_evento")
-    void createEventAccess(@Param("p_evento_id") Integer idEvent, @Param("p_tipo_acceso_id") Integer idAccessType,
+    Integer createEventAccess(@Param("p_evento_id") Integer idEvent, @Param("p_tipo_acceso_id") Integer idAccessType,
             @Param("p_precio") BigDecimal price, @Param("p_cupos") Integer spots);
 
     // Funciones

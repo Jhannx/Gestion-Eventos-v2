@@ -4,7 +4,11 @@ import com.jhanp.gestioneventos.domain.entity.EventRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
-public interface RoleEventRepository extends JpaRepository<EventRole, Integer> {
+public interface EventRoleRepository extends JpaRepository<EventRole, Integer> {
+    List<EventRole> findByActiveTrue();
+    List<EventRole> findByActiveFalse();
 }
 

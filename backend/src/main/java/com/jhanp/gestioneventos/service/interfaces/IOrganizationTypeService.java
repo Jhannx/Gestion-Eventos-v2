@@ -7,10 +7,9 @@ import java.util.List;
 
 public interface IOrganizationTypeService {
     List<OrganizationTypeResponseDTO> getAllOrganizationTypes();
-    List<OrganizationTypeResponseDTO> getOrganizationTypes();
     OrganizationTypeResponseDTO getOrganizationTypeById(Integer id);
     OrganizationTypeResponseDTO createOrganizationType(OrganizationTypeRequestDTO organizationTypeReq);
-    OrganizationTypeResponseDTO updateOrganizationType(OrganizationTypeRequestDTO organizationTypeReq);
+    OrganizationTypeResponseDTO updateOrganizationType(Integer id, OrganizationTypeRequestDTO organizationTypeReq);
     Boolean deleteOrganizationType(Integer id);
 
 }

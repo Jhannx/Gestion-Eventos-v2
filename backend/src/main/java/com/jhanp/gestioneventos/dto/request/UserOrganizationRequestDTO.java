@@ -1,4 +1,4 @@
-﻿package com.jhanp.gestioneventos.dto.request;
+package com.jhanp.gestioneventos.dto.request;
 
 import lombok.*;
 

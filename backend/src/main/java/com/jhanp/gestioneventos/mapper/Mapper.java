@@ -1,6 +1,7 @@
 package com.jhanp.gestioneventos.mapper;
 
 import com.jhanp.gestioneventos.domain.entity.*;
+import com.jhanp.gestioneventos.domain.view.*;
 import com.jhanp.gestioneventos.dto.request.*;
 import com.jhanp.gestioneventos.dto.response.*;
 
@@ -174,17 +175,20 @@ public class Mapper {
     }
 
     // Users to DTO
-    public static UserResponseDTO toResponseDTO (User user){
-        if(user == null) return null;
+    public static UserResponseDTO toResponseDTO(User user) {
+        if (user == null) return null;
 
-        List <UserOrganizationResponseDTO> userOrganizationResponseDTO
-                = Collections.singletonList((UserOrganizationResponseDTO) user.getOrganizations());
-        List <InvitationUserEventResponseDTO> invitationUserResponseDTO
-                = Collections.singletonList((InvitationUserEventResponseDTO) user.getInvitations());
-        List <UserSystemRoleResponseDTO> userSystemRoleResponseDTO =
-                Collections.singletonList((UserSystemRoleResponseDTO) user.getUserSystemRoles());
-        List <RegistrationResponseDTO> registrationResponseDTO =
-                Collections.singletonList((RegistrationResponseDTO) user.getRegistrations());
+        List<UserOrganizationResponseDTO> userOrganizationResponseDTO = user.getOrganizations() == null ? new ArrayList<>() :
+                user.getOrganizations().stream().map(Mapper::toResponseDTO).toList();
+
+        List<InvitationUserEventResponseDTO> invitationUserResponseDTO = user.getInvitations() == null ? new ArrayList<>() :
+                user.getInvitations().stream().map(Mapper::toResponseDTO).toList();
+
+        List<UserSystemRoleResponseDTO> userSystemRoleResponseDTO = user.getUserSystemRoles() == null ? new ArrayList<>() :
+                user.getUserSystemRoles().stream().map(Mapper::toResponseDTO).toList();
+
+        List<RegistrationResponseDTO> registrationResponseDTO = user.getRegistrations() == null ? new ArrayList<>() :
+                user.getRegistrations().stream().map(Mapper::toResponseDTO).toList();
 
         return UserResponseDTO.builder()
                 .idUser(user.getId())
@@ -272,5 +276,131 @@ public class Mapper {
                 .active(systemRole.getActive())
                 .build();
     }
+    // VISTAS → DTO
 
+    public static EventResponseDTO toResponseDTO(ActiveEventsView view) {
+        if (view == null) return null;
+
+        EventTypeResponseDTO eventTypeResponseDTO = EventTypeResponseDTO.builder()
+                .name(view.getEventType())
+                .build();
+
+        OrganizationResponseDTO organizationResponseDTO = OrganizationResponseDTO.builder()
+                .name(view.getOrganization())
+                .build();
+
+        return EventResponseDTO.builder()
+                .id(view.getId())
+                .name(view.getName())
+                .description(view.getDescription())
+                .address(view.getAddress())
+                .place(view.getPlace())
+                .date(view.getDate())
+                .startTime(view.getStartTime())
+                .endTime(view.getEndTime())
+                .capacity(view.getCapacity())
+                .accessRestriction(view.getAccessRestriction())
+                .eventStatus(view.getEventStatus())
+                .eventType(eventTypeResponseDTO)
+                .organization(organizationResponseDTO)
+                .eventAccessList(new ArrayList<>())
+                .build();
+    }
+
+    public static EventResponseDTO toResponseDTO(CancelledEventsView view) {
+        if (view == null) return null;
+
+        EventTypeResponseDTO eventTypeResponseDTO = EventTypeResponseDTO.builder()
+                .name(view.getEventType())
+                .build();
+
+        OrganizationResponseDTO organizationResponseDTO = OrganizationResponseDTO.builder()
+                .name(view.getOrganization())
+                .build();
+
+        return EventResponseDTO.builder()
+                .id(view.getId())
+                .name(view.getName())
+                .description(view.getDescription())
+                .address(view.getAddress())
+                .place(view.getPlace())
+                .date(view.getDate())
+                .eventStatus(view.getEventStatus())
+                .eventType(eventTypeResponseDTO)
+                .organization(organizationResponseDTO)
+                .eventAccessList(new ArrayList<>())
+                .build();
+    }
+
+    public static EventAccessResponseDTO toResponseDTO(AvailableAccessView view) {
+        if (view == null) return null;
+
+        EventResponseDTO eventResponseDTO = EventResponseDTO.builder()
+                .id(view.getIdEvent())
+                .name(view.getEventName())
+                .date(view.getDate())
+                .eventStatus(view.getEventStatus())
+                .build();
+
+        AccessTypeResponseDTO accessTypeResponseDTO = AccessTypeResponseDTO.builder()
+                .name(view.getAccessType())
+                .build();
+
+        return EventAccessResponseDTO.builder()
+                .id(view.getIdEventAccess())
+                .price(view.getPrice())
+                .spots(view.getAvailable_spots())
+                .accessStatus(view.getAccessStatus())
+                .event(eventResponseDTO)
+                .access(accessTypeResponseDTO)
+                .registrations(new ArrayList<>())
+                .build();
+    }
+
+    public static UserResponseDTO toResponseDTO(ActiveUsersView view) {
+        if (view == null) return null;
+
+        return UserResponseDTO.builder()
+                .idUser(view.getId())
+                .typeIdentification(view.getIdentificationType())
+                .numberIdentification(view.getIdentificationNumber())
+                .name(view.getFirstName())
+                .lastName(view.getLastName())
+                .secondLastName(view.getSecondLastName())
+                .phone(view.getPhone())
+                .email(view.getEmail())
+                .build();
+    }
+
+    public static EventAccessResponseDTO toResponseDTO(DetailEventView view) {
+        if (view == null) return null;
+
+        EventResponseDTO eventResponseDTO = EventResponseDTO.builder()
+                .id(view.getIdEvent())
+                .name(view.getName())
+                .address(view.getAddress())
+                .place(view.getPlace())
+                .date(view.getDate())
+                .startTime(view.getStartTime())
+                .endTime(view.getEndTime())
+                .capacity(view.getCapacity())
+                .accessRestriction(view.getAccessRestriction())
+                .eventStatus(view.getEventStatus())
+                .eventType(EventTypeResponseDTO.builder().name(view.getEventType()).build())
+                .organization(OrganizationResponseDTO.builder().name(view.getOrganization()).build())
+                .build();
+
+        AccessTypeResponseDTO accessTypeResponseDTO = AccessTypeResponseDTO.builder()
+                .name(view.getAccessType())
+                .build();
+
+        return EventAccessResponseDTO.builder()
+                .price(view.getPrice())
+                .spots(view.getAvailableSpots())
+                .accessStatus(view.getAccessStatus())
+                .event(eventResponseDTO)
+                .access(accessTypeResponseDTO)
+                .registrations(new ArrayList<>())
+                .build();
+    }
 }

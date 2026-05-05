@@ -24,6 +24,9 @@ public class UserRegistrationsView {
     @Column(name = "usuario_id")
     private Integer idUser;
 
+    @Column(name = "usuario_identificacion")
+    private String userIdentification;
+
     @Column(name = "usuario_nombre")
     private String userName;
 

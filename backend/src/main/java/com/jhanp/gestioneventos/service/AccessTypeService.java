@@ -56,9 +56,10 @@ public class AccessTypeService implements IAccessTypeService {
     public AccessTypeResponseDTO createAccessType(AccessTypeRequestDTO accessTypeReq) {
         log.info("Creando tipo de acceso: {}", accessTypeReq.getName());
 
+        // Validación de duplicados
         if (rep.existsByName(accessTypeReq.getName())) {
             log.warn("Intento de duplicado para el nombre: {}", accessTypeReq.getName());
-            throw new DuplicateResourceException("Error con duplicaciÃ³n de datos: " + accessTypeReq.getName());
+            throw new DuplicateResourceException("Error con duplicación de datos: " + accessTypeReq.getName());
         }
 
         AccessType accessType = AccessType.builder()
@@ -77,6 +78,7 @@ public class AccessTypeService implements IAccessTypeService {
     public AccessTypeResponseDTO updateAccessType(Integer id, AccessTypeRequestDTO accessTypeReq) {
         log.info("Actualizando tipo de acceso con ID: {}", id);
 
+        // Buscar tipo de acceso a actualizar
         AccessType accessType = rep.findById(id).orElseThrow(() -> {
             log.warn("Tipo de acceso no encontrado con ID: {}", id);
             return new ResourceNotFoundException("Tipo de acceso no encontrado con ID: " + id);
@@ -87,6 +89,7 @@ public class AccessTypeService implements IAccessTypeService {
         accessType.setActive(accessTypeReq.getActive());
 
         if (accessTypeReq.getEventAccesses() != null && !accessTypeReq.getEventAccesses().isEmpty()) {
+
             if (accessType.getEventAccesses() == null) {
                 accessType.setEventAccesses(new ArrayList<>());
             } else {
@@ -96,19 +99,21 @@ public class AccessTypeService implements IAccessTypeService {
             List<EventAccess> updatedEventAccesses = accessType.getEventAccesses();
 
             for (EventAccessRequestDTO eventAccessRequestDTO : accessTypeReq.getEventAccesses()) {
-                Event event = eventRep.findById(eventAccessRequestDTO.getIdEvent()).orElseThrow(() -> {
-                    log.warn("Evento no encontrado con ID: {}", eventAccessRequestDTO.getIdEvent());
-                    return new ResourceNotFoundException(
-                            "Evento no encontrado con ID: " + eventAccessRequestDTO.getIdEvent()
-                    );
-                });
-
+                // Buscar acceso evento existente
                 EventAccess eventAccess = eaRep.findById(eventAccessRequestDTO.getId()).orElseThrow(() -> {
                     log.warn("Acceso evento no encontrado con el id {}", eventAccessRequestDTO.getId());
                     return new ResourceNotFoundException(
                             "Evento acceso no encontrado con el id " + eventAccessRequestDTO.getId()
                     );
                 });
+                // Buscar evento del acceso existente
+                Event event = eventRep.findById(eventAccessRequestDTO.getIdEvent()).orElseThrow(() -> {
+                    log.warn("Evento no encontrado con ID: {}", eventAccessRequestDTO.getIdEvent());
+                    return new ResourceNotFoundException(
+                            "Evento no encontrado con ID: " + eventAccessRequestDTO.getIdEvent()
+                    );
+                });
+                // Asignar a la lista de accesos a eventos actualizados
 
                 eventAccess.setPrice(eventAccessRequestDTO.getPrice());
                 eventAccess.setSpots(eventAccessRequestDTO.getSpots());

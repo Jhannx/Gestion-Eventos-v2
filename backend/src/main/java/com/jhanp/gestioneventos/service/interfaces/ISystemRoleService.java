@@ -10,7 +10,7 @@ public interface ISystemRoleService {
     List<SystemRoleResponseDTO> getActivesSystemRoles();
     SystemRoleResponseDTO getSystemRoleById(Integer id);
     SystemRoleResponseDTO createSystemRole(SystemRoleRequestDTO systemRoleReq);
-    SystemRoleResponseDTO updateSystemRole(SystemRoleRequestDTO systemRoleRequestDTO);
+    SystemRoleResponseDTO updateSystemRole(Integer id, SystemRoleRequestDTO systemRoleRequestDTO);
     Boolean deleteSystemRole(Integer id);
 
 }

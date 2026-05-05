@@ -13,7 +13,7 @@ public interface IUserService {
     List<UserResponseDTO> searchById(String q);
     UserResponseDTO getUserById(Integer id);
     UserResponseDTO createUser(UserRequestDTO userReq);
-    UserResponseDTO updateUser(UserRequestDTO userReq);
+    UserResponseDTO updateUser(Integer id, UserRequestDTO userReq);
     Boolean deleteUser(Integer id, Boolean force);
 }
 

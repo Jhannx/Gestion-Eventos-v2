@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRegistrationsViewRepository extends JpaRepository<UserRegistrationsView, Integer> {
 
-    Page<UserRegistrationsView> findByIdUser(Integer idUser, Pageable pageable);
+    Page<UserRegistrationsView> findByUserIdentification(String userIdentification, Pageable pageable);
 
     Page<UserRegistrationsView> findByIdEvent(Integer idEvent, Pageable pageable);
 }

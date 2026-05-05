@@ -7,11 +7,11 @@ import org.springframework.data.domain.Page;
 import java.util.List;
 
 public interface IEventTypeService {
-    Page<EventTypeResponseDTO> getAllEventTypes(int page, int size);
-    Page<EventTypeResponseDTO> getActiveEventTypes(int page, int size);
-    Page<EventTypeResponseDTO> getInactiveEventTypes(int page, int size);
+    List<EventTypeResponseDTO> getAllEventTypes();
+    List<EventTypeResponseDTO> getActiveEventTypes();
+    List<EventTypeResponseDTO> getInactiveEventTypes();
     List<EventTypeResponseDTO> searchEventTypeById(String q);
     EventTypeResponseDTO createEventType(EventTypeRequestDTO eventTypeReq);
-    EventTypeResponseDTO updateEventType(EventTypeRequestDTO eventTypeReq);
+    EventTypeResponseDTO updateEventType(Integer id, EventTypeRequestDTO eventTypeReq);
     Boolean deleteEventType(Integer id);
 }

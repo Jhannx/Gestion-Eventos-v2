@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class OrganizationRequestDTO {
-    private Long id;
+    private Integer id;
     private String name;
     private Boolean active;
 
